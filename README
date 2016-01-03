@@ -1,0 +1,44 @@
+Programming Language Used -> Java
+
+How to run :-
+
+1) Run the make file.
+2) Run ./participate.sh <host_name/host_ip> <port_number> (Run it for all participants).
+3) Run ./coordinator.sh <port_number> participants.txt
+4) Run ./client.sh operations1.txt
+
+
+Sample Input/Output
+
+1) Participant
+
+chetan@chetan-Lenovo-Yoga-3-14:~/eclipse_workspace/Two_Phase_Commit_1st_Copy$ ./participant.sh localhost 8081
+Transaction Log File Not Found at Participant
+Inside run recovery
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Participant started and running on port 8081
+
+
+2) Coordinator
+
+chetan@chetan-Lenovo-Yoga-3-14:~/eclipse_workspace/Two_Phase_Commit$ ./coordinator.sh 8085 participants.txt
+Transaction Log File Not Found at Coordinator
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+coordinator started and running on port 8085
+
+
+3) Client
+
+chetan@chetan-Lenovo-Yoga-3-14:~/eclipse_workspace/Two_Phase_Commit$ ./client.sh operations1.txt
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Write transaction successful !!
+Write transaction successful !!
+Write transaction successful !!
+chetan@chetan-Lenovo-Yoga-3-14:~/eclipse_workspace/Two_Phase_Commit$ 
+
